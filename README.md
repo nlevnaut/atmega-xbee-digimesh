@@ -16,6 +16,7 @@ Example usage:
 #define TX_OPTS 0x00
 
 uint8_t rx_status = 0;
+uint8_t frame[MAX_BUF_SIZE];
 
 tim_init();
 serial_init(BAUD_PRESCALE, DATA_BITS_8, STOP_BITS_1, PARITY_DISABLED);
