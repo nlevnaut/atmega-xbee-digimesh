@@ -1,2 +1,4 @@
 # atmega-xbee-s3b
-Simple library for API mode communication, using XBee S3B 900HP modules and ATMega328
+TX and RX with an XBee S3B 900HP over the ATMega328p's UART.
+
+Check out xbee.h first to get an idea of how to use.
