@@ -1,5 +1,5 @@
-# atmega-xbee-s3b
-TX and RX with an XBee S3B 900HP over the ATMega328p's UART.
+# atmega-xbee-digimesh
+TX and RX with a Digimesh XBee over the ATMega328's UART.
 
 Example usage:
 ```
@@ -13,6 +13,7 @@ Example usage:
 #define USART_BAUDRATE 1200
 #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 #define RX_TIMEOUT 500 //ms
+#define TX_OPTS 0x00
 
 uint8_t rx_status = 0;
 
@@ -22,7 +23,7 @@ xbee_init();
 sei();
 
 // Broadcast a message
-tx("Hello world", 1, BROADCAST, 0x00);
+tx("Hello world", 11, BROADCAST, TX_OPTS);
 
 // Receive messages
 while(1)
